@@ -1,0 +1,80 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 250px;
+    width: 210px;
+    overflow: hidden;
+    border-radius:10px;
+    box-shadow: 0 70px 63px -60px black;
+    position: relative;
+    margin: 10px;
+}
+
+.card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+    filter: grayscale(1);
+}
+.card:hover img{
+    width: 200%;
+    filter: grayscale(0);
+}
+
+.card:hover{
+    transform: translateY(-30px);
+    box-shadow: 0 90px 63px -20px black;
+}
+.content
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    transition: 0.8s;
+    backdrop-filter: blur(0px);
+    transform: translateY(65%);
+}
+.card:hover .content{
+    transform: translateY(0);
+    backdrop-filter: blur(10px);
+}
+.content h2{
+    margin: 0;
+}
+.content {
+    font-size: small;
+    font-weight: 100;
+    padding: 10px 0;
+}
+.content .social{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.content .social .item{
+    border-right: 1px solid white;
+}
+.content .social .item:nth-last-child(1){
+    border-right: 1px solid white;
+}
+.content .social .title{
+    font-size: large;
+    margin: 0.8em;
+}
+.content .social .count{
+    opacity: 0.8;
+}
